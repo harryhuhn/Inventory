@@ -11,7 +11,7 @@ function App() {
   const [data, setData] = useState({items: []});
 
   useEffect(() => { 
-    fetch("https:/inventory-deployment-a654368fdac9.herokuapp.com/items/")
+    fetch("https://inventory-deployment-a654368fdac9.herokuapp.com/items/")
       .then((response) => response.json())
       .then((data) => setData({ items: data }));
   }, []);
@@ -25,7 +25,7 @@ function App() {
   const requestOptions = {
     method: "DELETE"
   }
-  fetch(`https:/inventory-deployment-a654368fdac9.herokuapp.com/items/${item.id}/`, requestOptions)
+  fetch(`https://inventory-deployment-a654368fdac9.herokuapp.com/items/${item.id}/`, requestOptions)
     .then((response) => {
       if (response.ok) {
         const idx = items.indexOf(item);
@@ -52,7 +52,7 @@ function App() {
         setData({ items: items });
       });
     setData({ items: items });*/
-    fetch("https:/inventory-deployment-a654368fdac9.herokuapp.com/items/", requestOptions)
+    fetch("https://inventory-deployment-a654368fdac9.herokuapp.com/items/", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         items.push(data);
