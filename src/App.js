@@ -11,7 +11,7 @@ function App() {
   const [data, setData] = useState({items: []});
 
   useEffect(() => { 
-    fetch("https://inventory-deployment.herokuapp.com/items/")
+    fetch("https:/inventory-deployment-a654368fdac9.herokuapp.com/items/")
       .then((response) => response.json())
       .then((data) => setData({ items: data }));
   }, []);
