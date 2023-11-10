@@ -11,7 +11,7 @@ function App() {
   const [data, setData] = useState({items: []});
 
   useEffect(() => { 
-    fetch("http://127.0.0.1:8000/items/")
+    fetch("https://inventory-deployment.herokuapp.com/items/")
       .then((response) => response.json())
       .then((data) => setData({ items: data }));
   }, []);
