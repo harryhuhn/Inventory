@@ -25,7 +25,7 @@ function App() {
   const requestOptions = {
     method: "DELETE"
   }
-  fetch(`http://127.0.0.1:8000/items/${item.id}/`, requestOptions)
+  fetch(`https:/inventory-deployment-a654368fdac9.herokuapp.com/items/${item.id}/`, requestOptions)
     .then((response) => {
       if (response.ok) {
         const idx = items.indexOf(item);
@@ -52,7 +52,7 @@ function App() {
         setData({ items: items });
       });
     setData({ items: items });*/
-    fetch("http://127.0.0.1:8000/items/", requestOptions)
+    fetch("https:/inventory-deployment-a654368fdac9.herokuapp.com/items/", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         items.push(data);
