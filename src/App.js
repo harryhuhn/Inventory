@@ -45,13 +45,6 @@ function App() {
       },
       body: JSON.stringify(item),
     };
-    /*fetch("http://localhost:3000/items", requestOptions)
-      .then((response) => response.json())
-      .then((data) => {
-        items.push(data);
-        setData({ items: items });
-      });
-    setData({ items: items });*/
     fetch("https://inventory-deployment-a654368fdac9.herokuapp.com/items/", requestOptions)
       .then((response) => response.json())
       .then((data) => {
