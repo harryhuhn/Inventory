@@ -11,7 +11,7 @@ function App() {
   const [data, setData] = useState({items: []});
 
   useEffect(() => { 
-    fetch("https://inventory-deployment-a654368fdac9.herokuapp.com/items/")
+    fetch("http://127.0.0.1:8000/items/")
       .then((response) => response.json())
       .then((data) => setData({ items: data }));
   }, []);
@@ -25,7 +25,7 @@ function App() {
   const requestOptions = {
     method: "DELETE"
   }
-  fetch(`https://inventory-deployment-a654368fdac9.herokuapp.com/items/${item.id}/`, requestOptions)
+  fetch(`http://127.0.0.1:8000/items/${item.id}/`, requestOptions)
     .then((response) => {
       if (response.ok) {
         const idx = items.indexOf(item);
@@ -45,7 +45,7 @@ function App() {
       },
       body: JSON.stringify(item),
     };
-    fetch("https://inventory-deployment-a654368fdac9.herokuapp.com/items/", requestOptions)
+    fetch("http://127.0.0.1:8000/items/", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         items.push(data);
