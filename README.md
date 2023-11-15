@@ -1,6 +1,6 @@
 To run this application in Visual Studio Code for demonstration purposes:
 1. Clone the repository using this command:
-   - git clone https://github.com/harryhuhn/Inventory/tree/master
+   - git clone https://github.com/harryhuhn/Inventory
    - cd Inventory
 2. Install dependencies:
    - pip install -r requirements.txt
